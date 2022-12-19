@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Transferencias interbancarias a bancos especificos" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-19T15:06:10" hostname="PSOFKA0696" time="0.128">
+  <properties/>
+  <testcase name="02 - Transferencia interbancaria exitosa a banco #1" classname="Transferencias interbancarias a bancos especificos" time="0.103"/>
+  <testcase name="02 - Transferencia interbancaria exitosa a banco #2" classname="Transferencias interbancarias a bancos especificos" time="0.009"/>
+  <testcase name="02 - Transferencia interbancaria exitosa a banco #3" classname="Transferencias interbancarias a bancos especificos" time="0.009"/>
+  <testcase name="03 - Transferencia interbancaria fallida" classname="Transferencias interbancarias a bancos especificos" time="0.007"/>
+  <system-out><![CDATA[
+@RutaCritica @Regresion
+Scenario Outline: 02 - Transferencia interbancaria exitosa a banco   ?[90m# src/test/resources/features/TransferenciasBancos.feature:11?[0m
+INICIA PRUEBA
+  ?[32mGiven ?[0m?[32mun usuario requiere realizar una transferencia interbancaria?[0m ?[90m# stepdefinitions.TransferenciasSteps.unUsuarioRequiereRealizarUnaTransferenciaInterbancaria()?[0m
+ENTIDAD BANCARIA: BBVA
+  ?[32mAnd ?[0m?[32mla cuenta destino es del ?[0m?[32m?[1m"BBVA"?[0m                                ?[90m# stepdefinitions.TransferenciasSteps.laCuentaDestinoEsDel(java.lang.String)?[0m
+PASO 12
+  ?[32mWhen ?[0m?[32mrealiza la transferencia antes de las ?[0m?[32m?[1m2?[0m?[32m pm?[0m                    ?[90m# stepdefinitions.TransferenciasSteps.realizaLaTransferenciaAntesDeLasPm(int)?[0m
+FINALIZA PRUEBA
+  ?[32mThen ?[0m?[32mla transferencia es exitosa?[0m                                   ?[90m# stepdefinitions.TransferenciasSteps.laTransferenciaEsExitosa()?[0m
+
+@RutaCritica @Regresion
+Scenario Outline: 02 - Transferencia interbancaria exitosa a banco   ?[90m# src/test/resources/features/TransferenciasBancos.feature:12?[0m
+INICIA PRUEBA
+  ?[32mGiven ?[0m?[32mun usuario requiere realizar una transferencia interbancaria?[0m ?[90m# stepdefinitions.TransferenciasSteps.unUsuarioRequiereRealizarUnaTransferenciaInterbancaria()?[0m
+ENTIDAD BANCARIA: Davivienda
+  ?[32mAnd ?[0m?[32mla cuenta destino es del ?[0m?[32m?[1m"Davivienda"?[0m                          ?[90m# stepdefinitions.TransferenciasSteps.laCuentaDestinoEsDel(java.lang.String)?[0m
+PASO 12
+  ?[32mWhen ?[0m?[32mrealiza la transferencia antes de las ?[0m?[32m?[1m2?[0m?[32m pm?[0m                    ?[90m# stepdefinitions.TransferenciasSteps.realizaLaTransferenciaAntesDeLasPm(int)?[0m
+FINALIZA PRUEBA
+  ?[32mThen ?[0m?[32mla transferencia es exitosa?[0m                                   ?[90m# stepdefinitions.TransferenciasSteps.laTransferenciaEsExitosa()?[0m
+
+@RutaCritica @Regresion
+Scenario Outline: 02 - Transferencia interbancaria exitosa a banco   ?[90m# src/test/resources/features/TransferenciasBancos.feature:13?[0m
+INICIA PRUEBA
+  ?[32mGiven ?[0m?[32mun usuario requiere realizar una transferencia interbancaria?[0m ?[90m# stepdefinitions.TransferenciasSteps.unUsuarioRequiereRealizarUnaTransferenciaInterbancaria()?[0m
+ENTIDAD BANCARIA: Banco Pichincha
+  ?[32mAnd ?[0m?[32mla cuenta destino es del ?[0m?[32m?[1m"Banco Pichincha"?[0m                     ?[90m# stepdefinitions.TransferenciasSteps.laCuentaDestinoEsDel(java.lang.String)?[0m
+PASO 12
+  ?[32mWhen ?[0m?[32mrealiza la transferencia antes de las ?[0m?[32m?[1m2?[0m?[32m pm?[0m                    ?[90m# stepdefinitions.TransferenciasSteps.realizaLaTransferenciaAntesDeLasPm(int)?[0m
+FINALIZA PRUEBA
+  ?[32mThen ?[0m?[32mla transferencia es exitosa?[0m                                   ?[90m# stepdefinitions.TransferenciasSteps.laTransferenciaEsExitosa()?[0m
+
+@SmokeTest
+Scenario: 03 - Transferencia interbancaria fallida                   ?[90m# src/test/resources/features/TransferenciasBancos.feature:16?[0m
+INICIA PRUEBA
+  ?[32mGiven ?[0m?[32mun usuario requiere realizar una transferencia interbancaria?[0m ?[90m# stepdefinitions.TransferenciasSteps.unUsuarioRequiereRealizarUnaTransferenciaInterbancaria()?[0m
+PASO 2
+  ?[32mWhen ?[0m?[32mrealiza la transferencia despues de las ?[0m?[32m?[1m2?[0m?[32m pm?[0m                  ?[90m# stepdefinitions.TransferenciasSteps.realizaLaTransferenciaDespuesDeLasPm(int)?[0m
+FIN DE LA PRUEBA FALLIDA
+  ?[32mThen ?[0m?[32mla transferencia es fallida?[0m                                   ?[90m# stepdefinitions.TransferenciasSteps.laTransferenciaEsFallida()?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
